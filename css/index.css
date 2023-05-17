@@ -11,6 +11,7 @@ body {
 
 .container {
   width: 100%;
+  margin: auto;
 }
 
 .hero-img-1 {
@@ -74,6 +75,96 @@ li {
   justify-content: flex-end;
 }
 
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .nav-link-2 a {
   color: #5d5d5d;
+}
+
+.hero-img-2 {
+  background-image: url("../images/hero-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+
+/* .text-box {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.hero-header {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  width: 50%;
+  margin: auto;
+}
+
+.hero-header-2 {
+  font-size: 7em;
+  line-height: 1;
+}
+
+.hero-header-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 25px;
+}
+
+.small-box {
+  width: 30%;
+  background-color: #000;
+}
+
+.hero-2-text-2 {
+  max-width: 50%;
+  margin: auto;
+}
+
+.blue-overlay {
+  position: relative;
+  top: 152px;
+  height: 35%;
+  background-color: #474f74;
+  opacity: 0.8;
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 80%; /* Adjust the width based on the number of pictures */
+  justify-content: space-around;
+  margin: auto;
+}
+
+.flex-pos {
+  display: flex;
+  align-items: center;
+}
+
+.slider-item {
+  height: 200px;
+}
+
+.radio-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.radio-btn {
+  margin: 0 5px;
+}
+
+.slider-item.active {
+  border: 2px solid #101a46;
+  padding: 10px;
 }
