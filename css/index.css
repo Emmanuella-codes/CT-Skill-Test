@@ -108,8 +108,12 @@ li {
 }
 
 .hero-header-2 {
-  font-size: 7em;
+  font-size: 5em;
   line-height: 1;
+}
+
+.num {
+  color: #7a7a7a;
 }
 
 .hero-header-element {
@@ -117,12 +121,13 @@ li {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  bottom: 25px;
+  bottom: 19px;
 }
 
 .small-box {
   width: 30%;
-  background-color: #000;
+  background-color: #7a7a7a;
+  color: #7a7a7a;
 }
 
 .hero-2-text-2 {
@@ -132,7 +137,7 @@ li {
 
 .blue-overlay {
   position: relative;
-  top: 152px;
+  top: 200px;
   height: 35%;
   background-color: #474f74;
   opacity: 0.8;
@@ -167,4 +172,85 @@ li {
 .slider-item.active {
   border: 2px solid #101a46;
   padding: 10px;
+}
+
+.section-2 {
+  margin-top: 30px;
+  height: 30%;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.section-2-header {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.small-box-2 {
+  width: 35%;
+  background-color: #7a7a7a;
+  color: #7a7a7a;
+}
+
+.section-2-text {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.hero-3-nav {
+  background-color: #101a46;
+  padding: 10px;
+}
+
+.hero-3-link {
+  width: 50%;
+  margin: auto;
+}
+
+.hero-3-link a {
+  color: #7a7a7e;
+}
+
+.hero-img-3 {
+  background-image: url("../images/hero-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero-3-items {
+
+}
+
+.hero-3-card {
+  background-color: #fff;
+  max-width: 20%;
+  padding: 8px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 10px;
+  background-color: #fff;
+  margin: 0;
+}
+
+.space {
+  margin-top: 10px;
 }
