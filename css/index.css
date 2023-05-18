@@ -293,7 +293,7 @@ footer {
     margin: 0 auto;
   }
 
-  .hero-img-1 .hero-img-2 .hero-img-3 {
+  .hero-img-1 .hero-img-2 {
     height: 50vh;
   }
 
@@ -347,6 +347,56 @@ footer {
     display: flex;
     align-items: center;
     margin-top: -57px;
+  }
+
+  .slider-item.active {
+    border: 2px solid #101a46;
+    height: 10%;
+    margin-top: 3%;
+  }
+
+  .radio-btns {
+    margin-top: -60px;
+  }
+
+  .section-2 {
+    margin-top: 40px;
+    width: 88%;
+    margin-bottom: 20px;
+  }
+
+  .hero-header-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    top: 25px;
+  }
+
+  .hero-3-link {
+    width: 73%;
+    margin: auto;
+  }
+
+  .hero-3-items {
+    max-width: 75%;
+  }
+
+  .hero-3-card {
+    max-width: 100%;
+    margin-top: 35%;
+  }
+
+  .hero-img-3 {
+    height: 60vh;
+  }
+
+  .footer-content {
+    font-size: 14px;
+  }
+
+  .footer-logo-text {
+    font-size: 14px;
   }
 }
 
