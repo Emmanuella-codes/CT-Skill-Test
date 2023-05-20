@@ -12,6 +12,7 @@ body {
 .container {
   width: 100%;
   margin: auto;
+  position: relative;
 }
 
 .hero-img-1 {
@@ -21,44 +22,107 @@ body {
   height: 80vh;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-}
-
 .logo {
   margin-top: 10px;
 }
 
 .navbar {
-  margin-top: 10px;
-}
-
-ul {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  opacity: 0.9;
   display: flex;
-  gap: 60px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar > .navbar-logo {
+  display: inline-block;
   margin-top: 10px;
 }
 
-li {
-  list-style: none;
+.navbar > .navbar-btn {
+  display: none;
 }
 
-.nav-link a {
+.navbar > .navbar-links {
+  display: flex;
+  float: right;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 50px;
+  gap: 10%;
+}
+
+.nav-link-1 {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+}
+
+.nav-link-1 {
   color: #fff;
 }
 
-.mobile-nav {
+.navbar > .nav-links > a:hover {
+  background-color: #7a7a7e;
+}
+
+.navbar > #nav-check {
   display: none;
+}
+
+.btn {
+  position: relative;
+  color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+}
+
+.btn:focus,
+.btn:hover {
+  color: #fff;
+}
+
+.btn:focus::after,
+.btn:hover::after {
+  width: 100%;
+  left: 0%;
+}
+
+.btn::after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 256px;
   font-size: 47px;
   line-height: 0.9;
+}
+
+.hero-text-big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 305px;
 }
 
 .hero-text-1 {
@@ -77,6 +141,14 @@ li {
   padding-bottom: 15px;
 }
 
+#section-text-1 {
+  color: #5b5959;
+}
+
+#section-text-2 {
+  color: #101a46;
+}
+
 .logo-section {
   display: flex;
   flex-direction: row;
@@ -86,12 +158,6 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .nav-link-2 a {
@@ -128,6 +194,7 @@ li {
   justify-content: flex-end;
   position: relative;
   bottom: 19px;
+  color: #1b2348;
 }
 
 .small-box {
@@ -143,7 +210,7 @@ li {
 
 .blue-overlay {
   position: relative;
-  top: 200px;
+  top: 210px;
   height: 35%;
   background-color: #474f74;
   opacity: 0.8;
@@ -212,13 +279,26 @@ li {
   padding: 10px;
 }
 
+li {
+  list-style: none;
+}
+
 .hero-3-link {
   width: 50%;
   margin: auto;
+  display: flex;
+  gap: 13%;
 }
 
 .hero-3-link a {
   color: #7a7a7e;
+  text-decoration: none;
+}
+
+.hero-3-link a:hover {
+  color: #1b2348;
+  background-color: #7a7a7e;
+  padding: 10px;
 }
 
 .hero-img-3 {
@@ -297,45 +377,53 @@ footer {
     margin: 0 auto;
   }
 
-  .desktop-navbar {
-    display: none;
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  .mobile-nav {
-    display: block;
+  .navbar-logo {
+    margin-left: 6px;
   }
 
-  .mobile-nav > .navbar-btn {
+  .navbar > .navbar-btn {
     display: inline-block;
     position: absolute;
     right: 0px;
     top: 0px;
   }
 
-  .mobile-nav > .navbar-btn > label {
+  .navbar > .navbar-btn > label {
     display: inline-block;
     width: 50px;
     height: 50px;
     padding: 13px;
   }
 
-  .mobile-nav > .navbar-btn > label:hover,
-  .mobile-nav #nav-check:checked ~ .navbar-btn > label {
-    background-color: #101a46;
+  #nav-check {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
   }
 
-  .mobile-nav > .navbar-btn > label > span {
+  .navbar > .navbar-btn > label:hover,
+  .navbar #nav-check:checked ~ .navbar-btn > label {
+    background-color: transparent;
+  }
+
+  .navbar > .navbar-btn > label > span {
     display: block;
     width: 25px;
     height: 10px;
     border-top: 2px solid #eee;
   }
 
-  .mobile-nav > .navbar-links {
+  .navbar > .navbar-links {
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #101a46;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
@@ -343,17 +431,20 @@ footer {
     left: 0px;
   }
 
-  .mobile-nav > .navbar-links > a {
+  .navbar > .navbar-links > a {
     display: block;
     width: 100%;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 10px 0px;
   }
 
-  .mobile-nav > #nav-check:not(:checked) ~ .navbar-links {
+  .navbar > #nav-check:not(:checked) ~ .navbar-links {
     height: 0px;
   }
 
-  .mobile-nav > #nav-check:checked ~ .navbar-links {
-    height: calc(100vh - 50px);
+  .navbar > #nav-check:checked ~ .navbar-links {
+    height: calc(18vh - 50px);
     overflow-y: auto;
   }
 
@@ -363,7 +454,10 @@ footer {
 
   .hero-text {
     font-size: 15px;
-    margin-top: 10px;
+  }
+
+  .hero-text-big {
+    margin-top: 55px;
   }
 
   .logo-section {
@@ -419,7 +513,7 @@ footer {
   }
 
   .section-2 {
-    margin-top: 40px;
+    margin-top: 50px;
     width: 88%;
     margin-bottom: 20px;
   }
@@ -433,7 +527,7 @@ footer {
   }
 
   .hero-3-link {
-    width: 73%;
+    width: 80%;
     margin: auto;
   }
 
