@@ -15,15 +15,4 @@ const removeActiveClass = () => {
   if (activeItem) {
     activeItem.classList.remove("active");
   }
-}
-
-// mobile nav
-/* document.addEventListener('DOMContentLoaded', () => {
-  const navbarToggle = document.querySelector('.navbar-toggle')
-  const navbarMenu = document.querySelector('.navbar-menu')
-
-  navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('navbar-open')
-    navbarMenu.classList.toggle('navbar-open')
-  })
-}) */
+};
